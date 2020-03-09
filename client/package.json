@@ -1,0 +1,20 @@
+{
+  "name": "cf-tech-test-client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next -p 8080",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "next": "9.2.2",
+    "primeicons": "^2.0.0",
+    "primereact": "^4.0.0",
+    "react": "16.13.0",
+    "react-bootstrap": "^1.0.0-beta.17",
+    "react-dom": "16.13.0"
+  }
+}
