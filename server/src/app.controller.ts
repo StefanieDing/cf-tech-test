@@ -1,39 +1,36 @@
 import { Controller, Get, Post, Body, Put, Param, Delete } from '@nestjs/common';
-import { AppService } from './app.service';
-import { CreateApplicationDto } from './create-application.dto';
+import { getManager, getRepository } from 'typeorm';
 
-@Controller('applications')
+@Controller()
 export class AppController {
- constructor(private readonly appService: AppService) {}
-  
+
   // //creates a new application object to db
   // @Post()
-  // async create(@Body() createApplicationDto: CreateApplicationDto) {
-  //   return await this.appService.create(app);
+  
   // }
   
-  // //gets all applications
-  // @Get()
-  // async findAll(@Query() app) {
-  //   return await this.appService.query(app);
+  //selects all applications
+  // @Get('/get')
+  //   getAll(){
+  //     return getManager.find(Application);
   // }
 
-  // //gets object to be edited
-  // @Get(':id')
-  // async findOne(@Param('id') id){
-  //   return await this.appService.findOneById(id);
+  // //selects object by id
+  // @Get('/get/:id') {
+  //   getOne(@Param('id') id) {
+  //     return getRepository(Application).findOne(id);
+  //   }
   // }
 
   // //updates object after it's been edited
   // @Put(':id')
-  // async update(@Param('id') id, @Body() updateApplicationDto: UpdateApplicationDto){
-  //   return await this.appService.update(app);
+  //   update(@Param('id') id){
+  // 	 return getRepository(Application)
   // }
 
   // //deletes object
   // @Delete(':id')
-  // async remove(@Param('id') id){
-  //   return await this.appService.remove(id);
-//   }
+  //   remove(@Param('id') id){
+  // 	return getRepository(Application).delete(id);
+  // }
 }
-

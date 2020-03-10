@@ -1,8 +1,9 @@
-import { PrimaryGeneratedColumn, Column, UpdateDateColumn, CreateDateColumn } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, UpdateDateColumn, CreateDateColumn } from 'typeorm';
 
-export abstract class ApplicationEntity {
-    @PrimaryGeneratedColumn('uuid')
-    id: string;
+@Entity()
+export class Application {
+    @PrimaryGeneratedColumn()
+    id: number;
 
     @Column({ type: 'varchar', length: 50 })
     first_name: string;
@@ -25,15 +26,15 @@ export abstract class ApplicationEntity {
     @Column({ type: 'varchar', length: 20, default: 'PENDING' })
     status: string;
 
-    @CreateDateColumn({ type: 'boolean', default: false })
+    @CreateDateColumn({ type: 'boolean', default: 'false' })
     primary_al: boolean;
 
-	@CreateDateColumn({ type: 'boolean', default: false })
+	@CreateDateColumn({ type: 'boolean', default: 'false' })
     primary_gl: boolean;
 
-    @CreateDateColumn({ type: 'boolean', default: false })
+    @CreateDateColumn({ type: 'boolean', default: 'false' })
     primary_el: boolean;
 
-    @CreateDateColumn({ type: 'boolean', default: false })
+    @CreateDateColumn({ type: 'boolean', default: 'false' })
     is_deleted: boolean;   
 }
