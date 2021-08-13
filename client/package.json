@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
-    "next": "9.2.2",
+    "next": "11.1.0",
     "primeicons": "^2.0.0",
     "primereact": "^4.0.0",
     "react": "16.13.0",
